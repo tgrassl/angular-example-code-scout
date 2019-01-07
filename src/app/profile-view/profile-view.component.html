@@ -1,0 +1,21 @@
+<div class="profile-view">
+  <div *ngIf="profiles.length > 0" infiniteScroll [data]="profiles" [limit]="300" (canGetNewData)="getNewProfiles(20)" class="row center-xs">
+      <div *ngFor='let profile of profiles' class="profile col-xs-3">
+        <div class=" profile__main">
+          <img class="profile__image" src="{{profile.picture.medium}}">
+          <p class="profile__name"><b>{{profile.name.first | titlecase }} {{profile.name.last | titlecase }}</b></p>
+        </div>
+
+        <div class="profile__contact">
+          <div class="row center-xs margin-bottom-10">
+              <i class="icon ion-md-mail"></i>{{profile.email}}
+          </div>
+          <div class="row center-xs">
+              <i class="icon ion-md-call"></i>{{profile.phone}}
+          </div>
+        </div>
+
+        <a class="center-xs button button--bb profile__cta" routerLink="/hire">Hire</a>
+      </div>
+    </div>
+</div>
