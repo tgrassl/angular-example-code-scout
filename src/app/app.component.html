@@ -1,7 +1,12 @@
 <div class="toolbar">
-  <h1 class="toolbar__title">CodeScout</h1>
+  <h1 class="toolbar__title" routerLink="/home">CodeScout</h1>
 </div>
 
-<router-outlet></router-outlet>
+<div class="page-content">
+  <router-outlet>
+      <app-scroll-to-top></app-scroll-to-top>
+  </router-outlet>
+</div>
+
 
 

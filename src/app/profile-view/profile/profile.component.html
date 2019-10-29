@@ -1,0 +1,20 @@
+<div class="row profile center-xs">
+  <div class="col-xs-12 profile__main">
+    <img class="profile__image" src="{{profile.picture.medium}}">
+    <p class="profile__name"><b>{{profile.name.first | titlecase }} {{profile.name.last | titlecase }}</b></p>
+  </div>
+
+  <div class="col-xs-12 profile__contact">
+    <div class="row center-xs margin-bottom-10">
+      <i class="icon ion-md-mail"></i>{{profile.email}}
+    </div>
+    <div class="row center-xs">
+      <i class="icon ion-md-call"></i>{{profile.phone}}
+    </div>
+  </div>
+
+  <button class="col-xs-6 button button--primary profile__cta" 
+          [routerLink]="['/hire']" 
+          [queryParams]="{firstName: profile.name.first, lastName: profile.name.last}">Hire
+  </button>
+</div>

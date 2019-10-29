@@ -1,0 +1,73 @@
+input:focus, textarea:focus {
+  border: 2px solid #000;
+  outline: none;
+}
+
+input, textarea {
+  border: 2px solid rgba(0,0,0,.12);
+  border-radius: 5px;
+  background: #fff;
+  font-size: 16px;
+  transition: border .25s ease-out;
+}
+
+input {
+  height: 30px;
+}
+
+textarea {
+  resize: none;
+  height: 100px;
+}
+
+input[type="date"] {
+  text-transform: uppercase;
+}
+
+input[type="date"]::-webkit-clear-button {
+  display: none;
+}
+
+
+input[type="date"]::-webkit-inner-spin-button {
+  display: none;
+}
+
+
+input[type="date"]::-webkit-calendar-picker-indicator {
+  color: #2c3e50;
+}
+
+label {
+  font-weight: bold;
+  font-size: 18px;
+}
+
+.hire-form-view {
+  height: 91vh;
+  padding: 5rem 1rem;
+}
+
+.hire-form {
+  max-width: 600px;
+  max-height: 600px;
+  margin: 0 auto;
+  padding: 1rem 2rem;
+  border-radius: 15px;
+  background-color: white;
+  box-shadow: 0 6px 15px rgba(36, 37, 38, 0.08);
+
+  &__title {
+    margin-bottom: 40px;
+    font-weight: 500;
+  }
+
+  &__input {
+    margin-bottom: 20px;
+  }
+
+  &__submit {
+    margin-top: 50px;
+  }
+
+}

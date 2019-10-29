@@ -6,14 +6,14 @@ import { HttpClient } from '@angular/common/http';
 })
 export class ProfileService {
 
-  private static API_URL = 'https://randomuser.me/api/';
+  private API_URL = 'https://randomuser.me/api/';
   constructor(private http: HttpClient) { }
 
   getProfile() {
-    return this.http.get(ProfileService.API_URL + '?nat=de');
+    return this.http.get(this.API_URL + '?nat=de');
   }
 
   getProfiles(amount: number) {
-    return this.http.get(ProfileService.API_URL + '?results=' + amount);
+    return this.http.get(this.API_URL + '?results=' + amount);
   }
 }

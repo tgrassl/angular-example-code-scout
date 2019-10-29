@@ -5,5 +5,11 @@
     &__title {
         text-align: center;
         font-size: 32px;
+        cursor: pointer;
+        outline: none;
     }
+}
+
+.page-content {
+    background-color: #f6f6f6;
 }

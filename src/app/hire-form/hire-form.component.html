@@ -1,3 +1,35 @@
-<p>
-  hire-form works!
-</p>
+<div class="hire-form-view">
+  <form class="hire-form center-xs" [formGroup]="hireForm" (ngSubmit)="submitForm()">
+    <h2 class="hire-form__title">Hire <b>{{profileName | titlecase}}</b> now!</h2>
+
+    <div class="row hire-form__input">
+      <label class="col-xs-12 col-lg-4 start-xs">Company:</label>
+      <input class="col-xs-12 col-lg-8" type="text" formControlName="hireCompany">
+    </div>
+
+    <div class="row hire-form__input">
+      <label class="col-xs-12 col-lg-4 start-xs">E-Mail:</label>
+      <input class="col-xs-12 col-lg-8" type="email" formControlName="hireCompanyEmail">
+    </div>
+
+    <div class="row hire-form__input">
+      <label class="col-xs-12 col-lg-4 start-xs">Start Date:</label>
+      <input class="col-xs-12 col-lg-8" type="date" formControlName="hireStart">
+    </div>
+
+    <div class="row hire-form__input">
+      <label class="col-xs-12 col-lg-4 start-xs">End Date:</label>
+      <input class="col-xs-12 col-lg-8" type="date" formControlName="hireEnd">
+    </div>
+
+    <div class="row hire-form__input">
+      <label class="col-xs-4 start-xs">Message:</label>
+      <textarea class="col-xs-12 col-lg-8" maxlength="120" formControlName="hireMessage"></textarea>
+    </div>
+
+    <div class="row center-xs hire-form__submit">
+      <button type="submit" class="col-xs-12 col-lg-8 button button--primary button--wide">Send</button>
+    </div>
+  </form>
+</div>
+

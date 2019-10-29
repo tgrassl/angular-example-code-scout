@@ -1,3 +1,4 @@
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { AppRoutingModule } from './app-routing.module';
 import { ProfileService } from './services/profile.service';
 import { BrowserModule } from '@angular/platform-browser';
@@ -8,18 +9,24 @@ import { AppComponent } from './app.component';
 import { InfiniteScrollDirective } from './directives/infinite-scroll.directive';
 import { ProfileViewComponent } from './profile-view/profile-view.component';
 import { HireFormComponent } from './hire-form/hire-form.component';
+import { ProfileComponent } from './profile-view/profile/profile.component';
+import { ScrollToTopComponent } from './scroll-to-top/scroll-to-top.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     InfiniteScrollDirective,
     ProfileViewComponent,
-    HireFormComponent
+    ProfileComponent,
+    HireFormComponent,
+    ScrollToTopComponent
   ],
   imports: [
     BrowserModule,
     HttpClientModule,
-    AppRoutingModule
+    AppRoutingModule,
+    FormsModule,
+    ReactiveFormsModule,
   ],
   providers: [ProfileService],
   bootstrap: [AppComponent]
