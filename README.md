@@ -1,4 +1,4 @@
-![](https://i.imgsafe.org/73/737344690d.png)
+![](https://i.ibb.co/dBrmYVY/code-scout-repo-banner.png)
 
 ## Development server
 
